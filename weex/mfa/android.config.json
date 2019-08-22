@@ -1,0 +1,6 @@
+{
+  "AppName":"Todos",
+  "AppId":"com.alibaba.weex",
+  "SplashText":"Todos",
+  "WeexBundle":"index.js"
+}
