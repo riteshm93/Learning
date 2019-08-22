@@ -1,0 +1,34 @@
+ul{
+	list-style: none;
+	border-top: 3px solid deepskyblue;
+	width: 608px;
+	padding: 0;
+	margin: 20px 30px;
+}
+
+li{
+	color: grey;
+	display: inline-block;
+	line-height: 3px;
+	padding: 5px 0 0 0;
+	width: 200px;
+}
+
+.l2{
+	text-align: center;
+}
+
+.l3{
+	text-align: right;
+}
+
+li > p{
+	color: silver;
+}
+
+.fa-circle{
+	color: deepskyblue;
+	position: relative;
+	top: -15px;
+}
+

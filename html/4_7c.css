@@ -1,0 +1,72 @@
+body{
+	background: #f8fbff;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	margin: 20px;
+	color: grey;
+}
+
+.status{
+	background: white;
+	color: dimgrey;
+	text-align: center;
+	border: 2px solid lightgrey;
+	border-radius: 5px;
+	padding: 20px;
+	position: relative;
+	bottom: 70px;
+}
+
+input[type='button']{
+	padding: 5px 50px;
+	background: deepskyblue;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+}
+
+section{
+	width: 45%;
+	display: inline-block;
+}
+
+.progress{
+	background: grey;
+	color: white;
+	border: 1px solid grey;
+	border-radius: 50%;
+	padding: 3px 8px;
+	margin-right: 25px;
+}
+
+.completed > .progress{
+	background: limegreen;
+}
+
+li ~ li{
+	margin: 20px 17px;
+}
+
+li ~ li::before{
+	content:'';
+	border-left: 2px solid grey;
+	position: relative;
+	top: -17px;
+	right: -14px;
+	z-index: -1;
+}
+
+li ~ li.completed::before{
+	content:'';
+	border-left: 2px solid limegreen;
+	position: relative;
+	top: -17px;
+	right: -14px;
+	z-index: -1;
+}

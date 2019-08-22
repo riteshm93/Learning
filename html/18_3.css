@@ -1,0 +1,9 @@
+body{font-family:'Lora', Times, serif; font-size:18px;}
+.logo-color{color:#dd9ebe;}
+nav a{color:darkgrey; font-size:16px;}
+nav a:hover{text-decoration:none; color:#cb6797;}
+footer{color:darkgrey;}
+footer ul{list-style:none;}
+footer ul li i.rounded-circle{color:#343a40; background:darkgrey; font-size:22px; width:30px; text-align:center;}
+.article a{color:#cb6797; text-decoration:underline;}
+.article a:hover{color:#dd9ebe; text-decoration:none;}

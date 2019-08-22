@@ -1,0 +1,45 @@
+section{
+	display: inline-block;
+	width: 45%;
+}
+
+ul{
+	list-style: none;
+}
+
+.summary{
+	position: relative;
+	top: -45px;
+}
+
+li{
+	border-left: 2px solid grey;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	text-transform: uppercase;
+}
+
+li::before{
+	border-top: 2px solid grey;
+	width: 17px;
+	top: 23px;
+	left: -20px;
+	display: block;
+	content: "";
+	position: relative;
+}
+
+.list{
+	position: relative;
+	top: 12px;
+}
+
+.fa-check{
+	color: silver;
+}
+
+.done .fa-check{
+	color: green;
+}
+

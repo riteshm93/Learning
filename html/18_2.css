@@ -1,0 +1,81 @@
+body {
+  margin: 0; }
+
+ul {
+  list-style: none; }
+
+li {
+  display: inline-block; }
+
+body {
+  margin: 0; }
+
+header {
+  background: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  z-index: 100; }
+  header img {
+    display: inline-block;
+    padding-right: 5px;
+    border-left: 1px solid silver; }
+  header ul {
+    position: fixed;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+    margin: 5px;
+    color: silver; }
+    header ul li {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid silver;
+      border-radius: 3px;
+      min-width: 25px; }
+  header .download {
+    color: white;
+    background: blue; }
+
+.nav-bar {
+  z-index: 90;
+  color: white;
+  padding: 10px 20px;
+  background: skyblue;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 55px; }
+  .nav-bar .name {
+    font-size: 18px;
+    display: inline-block; }
+  .nav-bar .menu {
+    position: absolute;
+    right: 0;
+    top: -10px; }
+    .nav-bar .menu li {
+      padding: 5px 10px; }
+
+.page-content {
+  position: relative;
+  top: 95px; }
+
+.home {
+  background: url("atlas.jpg");
+  padding: 100px 20px;
+  text-align: center;
+  color: white; }
+  .home .welcome {
+    font-size: 48px; }
+  .home .details {
+    font-size: 18px; }
+  .home .next {
+    margin: 36px 45%;
+    border: 2px solid white;
+    font-size: 22px;
+    border-radius: 50%;
+    width: 36px; }
+
+/*# sourceMappingURL=18_2.css.map */

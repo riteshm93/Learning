@@ -1,0 +1,28 @@
+div{
+	padding: 20px 40px 40px 40px;
+	text-align: center;
+	border: 2px;
+	color: darkred;
+	max-width: 600px;
+	margin: 10px;
+}
+
+.outer-div{
+	border-style: solid;
+	border-color: orange;
+	background: #a2a0a0;
+}
+
+.inner-div{
+	border-color: blue;
+	border-style: dashed;
+	background: white;
+}
+
+.core-div{
+	border-color: green;
+	border-style: dotted;
+	background: #dedcdc;
+	border-radius: 5px;
+	height: 60px;
+}

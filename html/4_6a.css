@@ -1,0 +1,79 @@
+.block{
+	border: 2px;
+	border-style:solid;
+	padding: 10px;
+}
+
+.div1{
+	color: white;
+	border-color: orange;
+	background: rgba(25,175,90,0.75);
+	width: 400px;
+	position: static;
+	height: 120px;
+}
+
+.div2{
+	color: yellow;
+	border-color: grey;
+	background: rgba(0,100,200,0.5);
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 20px;
+	left: 150px;
+	z-index: 1;
+}
+
+.div3{
+	border-color: red;
+	text-align: right;
+	background: rgba(0,0,0,0.5);
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	height: 90px;
+}
+
+.div4{
+	color: white;
+	border-color: orange;
+	background: rgba(25,175,90,0.75);
+	width: 400px;
+	margin-top: 20px;
+	position: static;
+	height: 120px;
+}
+
+.div5{
+	border-color: red;
+	background: rgba(200,0,0,0.5);
+	width: 200px;
+	position: relative;
+	left: 350px;
+	top: -100px;
+	z-index: 2;
+}
+
+.div6{
+	border: 0px;
+	background: #A6CFC4;
+	width: 150px;
+	height: 90%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.div7{
+	border: 0px;
+	text-align: center;
+	background: lightgrey;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 80px;
+	position: absolute;
+	bottom: 0px;
+}
