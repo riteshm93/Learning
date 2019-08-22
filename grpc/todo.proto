@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package todo;
+
+service Todos {
+  rpc AddTodo (Todo) returns (OperationResponse) {}
+  rpc ListTodos (ListTodosRequest) returns (TodosList) {}
+  rpc DeleteTodo (Todo) returns (OperationResponse) {}
+  rpc UpdateTodo (Todo) returns (OperationResponse) {}
+}
+
+message Todo {
+  int64 id = 1;
+  string todo = 2;
+  string note = 3;
+
+  enum Status {
+    UNKNOWN_STATUS = 0;
+    IN_PROGRESS = 1;
+    COMPLETED = 2;
+    NOT_STARTED = 3;
+  }
+  Status status = 4;
+}
+
+message OperationResponse {
+  enum Status {
+    UNKNOWN_STATUS = 0;
+    SUCCESS = 1;
+    ERROR = 2;
+  }
+  Status status = 1;
+  string message = 2;
+  Todo todo = 3;
+}
+
+message ListTodosRequest {
+  int32 count = 1;
+}
+
+message TodosList {
+  repeated Todo data = 1;
+}
