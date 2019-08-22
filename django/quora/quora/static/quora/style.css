@@ -1,0 +1,60 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #d9d9d9;
+}
+
+.wrapper {
+	width: 740px;
+	padding: 10px;
+	background: #ffffff;
+}
+
+section .question {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e2e2e2
+}
+
+section .comment {
+	margin-top: 5px;
+	padding: 5px;
+	background: #f7f7f7;
+}
+
+section .answer{
+	margin: 5px 0px;
+	padding: 0px;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+a {
+	color: black;
+}
+
+textarea{
+	width: 100%;
+	height: 2em;
+	border-radius: 5px;
+}
+
+.post-answer {
+	height: 50px;
+}
+
+.post-options form{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+form {
+	margin-bottom: 10px;
+}
+
+a.edit:hover{
+	text-decoration: none;
+}

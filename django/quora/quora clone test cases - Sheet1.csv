@@ -1,0 +1,36 @@
+Post,,,,,,
+User can post question,test_create_post_with_type_question_when_post_type_is_question,,,,,
+User can post answer to a question,test_create_post_with_type_answer_when_post_type_is_answer_and_parent_is_question,,,,,
+User can post comment to a question,test_create_post_with_type_comment_when_post_type_is_comment_and_parent_is_question,,,,,
+User can post comment to an answer,test_create_post_with_type_comment_when_post_type_is_comment_and_parent_is_answer,,,,,
+Root parent id of question should be question id,test_get_root_parent_id_for_question,,,,,
+Root parent id of answer should be question id,test_get_root_parent_id_for_answer,,,,,
+Root parent id of comment on answer should be question id,test_get_root_parent_id_for_comment_on_answer,,,,,
+Root parent id of comment on question should be question id,test_get_root_parent_id_for_comment_on_question,,,,,
+Question parent should be none,test_create_post_with_type_question_and_parent_is_some_valid_post_throws_exception,,,,,
+Answer parent should not be none/Answer/Comment,test_create_post_with_type_answer_and_parent_is _not_question_throws_exception,,,,,
+Comment parent should not be none/Comment,test_create_post_with_type_comment_and_parent_is _not_either_question_or_answer_throws_exception,,,,,
+Upvote count cant be negative,test_create_post_with_upvote_less_than_zero_throws_exception,,,,,
+Downvote count cant be negative,test_create_post_with_downvote_less_than_zero_throws_exception,,,,,
+,,,,,,
+Vote,,,,,,
+User cant vote on their own posts,test_create_vote_with_user_same_as_post_postedby_throws_exception,,,,,
+Final Vote after voting,,,,,,
+Old Vote,New Vote,Result,,,,
+N,U,U,test_final_vote_is_upvote_when_user_change_their_vote_from_none_to_upvote,,,
+N,D,D,test_final_vote_is_downvote_when_user_change_their_vote_from_none_to_downvote,,,
+N,N,N,test_final_vote_is_none_when_user_change_their_vote_from_none_to_none,,,
+U,D,D,test_final_vote_is_downvote_when_user_change_their_vote_from_upvote_to_upvote,,,
+U,U,N,test_final_vote_is_none_when_user_revote_on_upvote,,,
+U,N,N,test_final_vote_is_none_when_user_change_their_vote_from_upvote_to_none,,,
+D,U,U,test_final_vote_is_upvote_when_user_change_their_vote_from_downvote_to_upvote,,,
+D,D,N,test_final_vote_is_none_when_user_revote_on_downvote,,,
+D,N,N,test_final_vote_is_none_when_user_change_their_vote_from_downvote_to_none,,,
+Final Vote count after voting,,,,,,
+Old Vote,New Vote,Old Upvotes Count,New Upvotes Count,Old Downvotes Count,New Downvotes Count,
+N,U,0,1,0,0,test_upvotes_count_change_form_zero_to_one_on_new_upvote
+N,D,0,0,0,1,test_downvotes_count_change_form_zero_to_one_on_new_downvote
+U,D,1,0,0,1,test_downvotes_count_change_form_one_to_zero_and_upvotes_count_changes_form_one_to_zero_on_vote_change_from_upvote_to_downvote
+U,U,1,0,0,0,test_upvotes_count_change_form_one_to_zero_on_revote_on_upvote
+D,U,0,1,1,0,test_upvotes_count_change_form_one_to_zero_and_downvotes_count_changes_form_one_to_zero_on_vote_change_from_downvote_to_upvote
+D,D,0,0,1,0,test_downvotes_count_change_form_one_to_zero_on_revote_on_downvote

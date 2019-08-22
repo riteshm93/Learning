@@ -1,0 +1,11 @@
+<nav class='p-2 border-bottom'>
+	<ul class='nav justify-content-center'>
+		<li class='nav-item px-4'><a href="{% url 'quora:questions'%}">Home</a></li>
+		{% if user.is_authenticated %}
+		<li class='nav-item px-4'><a href="{% url 'quora:new_question' %}">Add Question</a></li>
+		<li class='nav-item px-4'><a href="{% url 'quora:logout' %}">Logout</a></li>
+		{% else %}
+		<li class='nav-item px-4'><a href="{% url 'quora:index' %}">Login</a></li>
+		{% endif %}
+	</ul>
+</nav>

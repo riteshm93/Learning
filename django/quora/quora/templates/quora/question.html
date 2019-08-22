@@ -1,0 +1,74 @@
+{% extends './base.html' %}
+
+{% block body %}
+{% include "./nav-bar.html" %}
+<div class="wrapper m-auto">
+  <section class="post question">
+    {% include "./post-details.html" with post=post description_style='h4' %}
+    {% if user.is_authenticated %}
+    <form action="{% url 'quora:new_post' post.COMMENT post.id %}" method="post">
+      {% csrf_token %}
+      {{ commentform }}
+      <br />
+      <input type="submit" value="Comment" class="btn-sm btn-primary" />
+    </form>
+    {% endif %}
+    {% if comments %}
+    <h6> Recent Comments: </h6>
+    <ul>
+      {% for comment in comments %}
+      <li>
+        <section class="post comment">
+          {% include "./post-details.html" with post=comment description_style='m-0'%}
+        </section>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  <section class="thread">
+    <hr />
+    {% if user.is_authenticated and user.id != post.posted_by_id %}
+    <h6> Answer this question: </h6>
+    <form action="{% url 'quora:new_post' post.ANSWER post.id %}" method="post">
+      {% csrf_token %}
+      {{ answerform }}
+      <br />
+      <input type="submit" value="Answer" class="btn-sm btn-primary" />
+    </form>
+    <hr />
+    {% endif %}
+    {% if answers %}
+    <h6> Recent Answers: </h6>
+    <ul>
+      {% for answer in answers %}
+      <li>
+        <section class="post answer">
+          {% include "./post-details.html" with post=answer description_style='h5'%}
+
+          {% if user.is_authenticated %}
+          <form action="{% url 'quora:new_post' post.COMMENT answer.id %}" method="post">
+            {% csrf_token %}
+            {{ commentform }}
+            <br />
+            <input type="submit" value="Comment" class="btn-sm btn-primary" />
+          </form>
+          {% endif %}
+          <ul>
+            {% for comment in answer.comments %}
+            <li>
+              <section class="post comment">
+                {% include "./post-details.html" with post=comment description_style='m-0'%}
+              </section>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </section>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

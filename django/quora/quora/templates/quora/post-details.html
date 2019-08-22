@@ -1,0 +1,5 @@
+<p class={{description_style}}>{{ post.description }}</p>
+<div class="post-details">
+	Posted by {{ post.posted_by.get_full_name }} on {{ post.posted_on }}(Last updated on {{ post.last_updated }})
+</div>
+{% include "./post-options.html" with post=post %}

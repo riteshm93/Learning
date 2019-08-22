@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+{% block body %}
+{% include "./nav-bar.html" %}
+<div class="wrapper m-auto">
+  <section class="post question">
+    <h5>{{ post.description }}</h5>
+    <div class="post-details">
+      Posted by {{ post.posted_by.get_full_name }}
+      on {{ post.posted_on }}
+      ( last updated on {{ post.last_updated }})
+    </div>
+    <div class="post-details">
+      {{ post.up_votes }} Upvotes 
+      {{ post.down_votes }} Downvotes
+    </div>
+    <div class="post-options">
+      {% if user == post.posted_by %}
+      <a class='edit' href="{% url 'quora:edit' post.id %}">
+        <button class="btn-sm btn-warning" ><i class="fa fa-pencil-square-o"></i> Edit</button>
+      </a>
+      <form action="{% url 'quora:delete' post.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn-sm btn-danger" onclick="return confirm('Are you sure, you want to delete?')"><i class="fa fa-trash-o"></i> Delete</button>
+      </form>
+      {% endif %}
+      <a class='back' href="{% url 'quora:question_detail' post.get_root_parent_id %}">
+        <button class="btn-sm btn-primary" ><i class="fa fa-chevron-left"></i> Back</button>
+      </a>
+    </div>
+  </section>
+</div>
+{% endblock %}

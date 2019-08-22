@@ -1,0 +1,15 @@
+<div class="post-options">
+  {% if user.is_authenticated %}
+    {% if post.posted_by_id == user.id %}
+    <a class='details' href="{% url 'quora:details' post.id %}">
+      <button class="btn-sm btn-info mb-2" ><i class="fa fa-info-circle"></i> Details</button>
+    </a>
+    {% else %}
+    <form action="{% url 'quora:vote' post.id %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn-sm btn-success" name="choice" value="U"><i class="fa fa-thumbs-o-up"></i> ({{ post.up_votes }})</button>
+      <button type="submit" class="btn-sm btn-danger" name="choice" value="D"><i class="fa fa-thumbs-o-down"></i> ({{ post.down_votes }})</button>
+    </form>
+    {% endif %}
+  {% endif %}
+</div>
