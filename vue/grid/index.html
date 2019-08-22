@@ -1,0 +1,16 @@
+<div id="app">
+  <input v-model="search"/>
+    <table>
+      <tr>
+      <th>Name</th>
+      <th>Power</th>
+      </tr>
+      <tr v-for="list in data">
+        <td v-for="item in list">
+        <power-list v-bind:item='item'></power-list>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<script type="text/javascript" src="dist/build.js"></script>

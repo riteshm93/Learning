@@ -1,0 +1,37 @@
+{
+  "name": "todo_vue",
+  "version": "1.0.0",
+  "description": "Todo app",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riteshm93/todo_vue.git"
+  },
+  "author": "Ritesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riteshm93/todo_vue/issues"
+  },
+  "homepage": "https://github.com/riteshm93/todo_vue#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "hamljs": "^0.6.2",
+    "node-sass": "^4.9.3",
+    "npm": "^6.4.1",
+    "sass": "^1.2.1",
+    "sass-loader": "^7.0.1"
+  }
+}

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="statics/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Todos - A Simple Todo App</h1>
+    </header>
+    <aside class='sidebar'>
+      <div class='sidebar-menu'>
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <a href="new-todo.html"><li>Add a new Todo</li></a>
+        </ul>
+      </div>
+    </aside>
+    <div id="content">
+      <input
+        v-model="newTodoText"
+        placeholder="Add a todo"
+      >
+      <br />
+      <button class="btn-sm btn-primary" v-on:click="addNewTodo">Add Todo</button>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="dist/build.js"></script>
+  </body>
+</html>
